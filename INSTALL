@@ -21,3 +21,24 @@ svn checkout svn://www.in-silico.de/lazar/trunk (obviously you have already done
 cd trunk/ && make
 
 After successful compilation, you should have created (among others) the executable lazar in the current directory.
+
+
+
+
+=======================================
+Installation using Msys & MinGW & WinXP
+=======================================
+
+Install Msys and MinGW (http://www.mingw.org/, then update gcc-core and gcc-g++ packages manually to the latest version).
+
+OpenBabel: follow the installation instrucations at http://openbabel.org/wiki/Install_(MinGW) to build OpenBabel yourself or download the binary DLLs at http://github.com/amaunz/openbabel-dll/tree (with git: git clone git://github.com/amaunz/openbabel-dll.git).
+
+GSL: Get the binary at http://gnuwin32.sourceforge.net/packages/gsl.htm
+
+R: Get the base Windows Installer at http://dirichlet.mat.puc.cl/ or http://www.r-project.org/
+
+boost: Download the boost package at http://sourceforge.net/project/showfiles.php?group_id=7586 or visit http://www.boost.org/.
+
+Get the source code at http://github.com/helma/lazar-core/tree/nosocket. The Makefile automagically detects Windows. However, you have to adjust the include (-I) and linker (-L, -l) flags. Run make.
+
+
